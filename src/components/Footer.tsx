@@ -3,25 +3,34 @@ import { MessageCircle, MapPin, Sparkles, Heart } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
-import { MandalaOrnament, HangingMandalaCluster } from './MandalaArt';
+import { ToranaRibbon } from './ToranaArt';
+import { MandalaOrnament } from './MandalaArt';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#F2ECE4] border-t border-[#E4D7CA] text-[#4A3E39] pt-12 pb-8 relative overflow-hidden">
-      {/* Hanging Festive Mandala in Footer Corner */}
-      <div className="absolute top-0 right-4 sm:right-12 z-0 opacity-80 hidden sm:block">
-        <HangingMandalaCluster />
-      </div>
-
-      {/* Background Mandala Watermark */}
+    <footer id="contact" className="bg-[#F2ECE4] border-t border-[#E4D7CA] text-[#4A3E39] pt-0 pb-8 relative overflow-hidden">
+      {/* Light rotating rangoli in footer corner */}
       <MandalaOrnament
-        size={380}
+        size={360}
+        color="#8B2635"
+        opacity={0.06}
+        spin={true}
+        className="absolute -bottom-20 -right-20 pointer-events-none select-none"
+      />
+      <MandalaOrnament
+        size={300}
         color="#D4AF37"
         opacity={0.08}
-        className="absolute -bottom-24 -left-20 pointer-events-none"
+        spin={true}
+        className="absolute top-10 -left-16 pointer-events-none select-none"
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      {/* Mango leaves and Marigold Torana ribbon across the top of footer */}
+      <div className="w-full relative z-10 -mb-1 opacity-75">
+        <ToranaRibbon className="h-6 sm:h-8" />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 pt-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-[#DFD3C5]">
 
           {/* Brand Column */}

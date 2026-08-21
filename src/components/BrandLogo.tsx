@@ -1,6 +1,6 @@
 import React from 'react';
 import { BRAND_CONFIG } from '../config/brand';
-import { MandalaOrnament } from './MandalaArt';
+import { MarigoldLeafHalo, MarigoldFlower } from './ToranaArt';
 
 interface BrandLogoProps {
   variant?: 'header' | 'hero' | 'footer' | 'compact';
@@ -12,7 +12,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'header', classN
     return (
       <div className={`flex items-center gap-2.5 ${className}`}>
         <div className="relative w-9 h-9 flex items-center justify-center">
-          <MandalaOrnament size={42} color="#D4AF37" opacity={0.6} className="absolute inset-0 m-auto animate-spin-slow" />
+          <MarigoldLeafHalo size={40} className="absolute inset-0 m-auto" />
           <div className="w-7 h-7 rounded-full bg-[#8B2635] flex items-center justify-center text-[#FAF7F2] font-serif-title font-bold text-sm shadow-sm border border-[#D4AF37]/50 relative z-10">
             A
           </div>
@@ -34,13 +34,17 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'header', classN
       <div className={`flex flex-col items-center text-center ${className}`}>
         {/* Replaceable Brand Asset / Wordmark Area */}
         <div className="relative mb-2">
-          {/* Traditional motif badge with mini mandala */}
+          {/* Traditional motif badge with marigold flowers */}
           <div className="inline-flex items-center justify-center gap-2 mb-3 px-4 py-1.5 rounded-full bg-[#FAF7F2] border border-[#C29B38]/40 shadow-xs">
-            <MandalaOrnament size={16} color="#8B2635" />
+            <svg viewBox="0 0 20 20" width="16" height="16">
+              <MarigoldFlower cx={10} cy={10} r={7} color="orange" />
+            </svg>
             <span className="text-[11px] uppercase tracking-widest font-bold text-[#8C4320]">
               Mysuru Home Kitchen • ಮೈಸೂರು
             </span>
-            <MandalaOrnament size={16} color="#8B2635" />
+            <svg viewBox="0 0 20 20" width="16" height="16">
+              <MarigoldFlower cx={10} cy={10} r={7} color="yellow" />
+            </svg>
           </div>
 
           <div className="relative inline-block">
@@ -66,7 +70,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'header', classN
       <div className={`flex flex-col ${className}`}>
         <div className="flex items-center gap-3">
           <div className="relative w-12 h-12 flex items-center justify-center">
-            <MandalaOrnament size={52} color="#D4AF37" opacity={0.65} className="absolute inset-0 m-auto animate-spin-slow" />
+            <MarigoldLeafHalo size={50} className="absolute inset-0 m-auto" />
             <div className="w-9 h-9 rounded-full bg-[#8B2635] flex items-center justify-center text-[#FAF7F2] font-serif-title font-bold text-xl border border-[#D4AF37]/60 shadow-sm relative z-10">
               A
             </div>
@@ -90,9 +94,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'header', classN
   // Default Header variant
   return (
     <div className={`flex items-center gap-3 cursor-pointer select-none group ${className}`}>
-      {/* Brand Icon Token with Mandala halo */}
+      {/* Brand Icon Token with Mango Leaves & Marigold wreath halo */}
       <div className="relative w-11 h-11 flex items-center justify-center">
-        <MandalaOrnament size={46} color="#D4AF37" opacity={0.55} className="absolute inset-0 m-auto group-hover:rotate-45 transition-transform duration-500" />
+        <MarigoldLeafHalo size={46} className="absolute inset-0 m-auto group-hover:rotate-45 transition-transform duration-500" />
         <div className="w-8.5 h-8.5 rounded-full bg-gradient-to-br from-[#8B2635] to-[#6E1723] flex items-center justify-center text-[#FAF7F2] font-serif-title font-bold text-xl shadow-sm border border-[#D4AF37]/50 relative z-10 group-hover:scale-105 transition-transform">
           A
         </div>
@@ -108,4 +112,5 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'header', classN
     </div>
   );
 };
+
 

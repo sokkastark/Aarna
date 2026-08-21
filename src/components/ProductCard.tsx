@@ -3,6 +3,7 @@ import { ShoppingBag, Eye, Check, Sparkles } from 'lucide-react';
 import { Product, ProductVariant } from '../types';
 import { useCart } from '../context/CartContext';
 import { ProductVisual } from './ProductVisual';
+import { CornerToranaAccent } from './ToranaArt';
 import { CornerMandala } from './MandalaArt';
 
 interface ProductCardProps {
@@ -30,8 +31,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       onClick={() => openProductModal(product)}
       className="group bg-[#FAF7F2] rounded-2xl border border-[#E8DFD5] hover:border-[#C29B38]/60 p-4 sm:p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md cursor-pointer relative overflow-hidden"
     >
-      {/* Decorative Corner Mandala Rosette */}
-      <CornerMandala position="top-right" size={100} color="#D4AF37" opacity={0.12} className="group-hover:opacity-25 transition-opacity" />
+      {/* Light Corner Mandala watermark & subtle Corner Torana Accent */}
+      <CornerMandala position="top-right" size={90} color="#D4AF37" opacity={0.08} className="group-hover:opacity-20 transition-opacity" />
+      <CornerToranaAccent position="top-right" size={38} className="opacity-45 group-hover:opacity-85 transition-opacity" />
 
       {/* Top badges */}
       <div className="flex items-center justify-between gap-2 mb-3 relative z-10">

@@ -3,38 +3,40 @@ import { ArrowDown, MessageCircle, Heart, Sparkles, CheckCircle2 } from 'lucide-
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 import heroMuralImg from '../assets/images/mysuru_heritage_mural_1787340068067.jpg';
-import { HangingMandalaCluster, HangingSingleMandala, MandalaOrnament } from './MandalaArt';
+import { ToranaGarlandBanner } from './ToranaArt';
+import { MandalaOrnament } from './MandalaArt';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#FAF7F2] via-[#F6F0E7] to-[#FAF7F2] py-10 md:py-16 border-b border-[#EAE1D7]">
-      {/* Hanging Festive Mandala Clusters (from reference designs) */}
-      <div className="absolute top-0 left-2 sm:left-8 z-10 hidden sm:block">
-        <HangingMandalaCluster />
-      </div>
-      <div className="absolute top-0 right-2 sm:right-8 z-10">
-        <HangingMandalaCluster />
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#FAF7F2] via-[#F6F0E7] to-[#FAF7F2] pt-0 pb-10 md:pb-16 border-b border-[#EAE1D7]">
+      {/* Sleek, delicate Mango Leaves & Marigold Flower Torana Banner across top */}
+      <div className="w-full relative z-20 opacity-90">
+        <ToranaGarlandBanner className="h-9 sm:h-12 md:h-14 drop-shadow-2xs" />
       </div>
 
-      {/* Rotating Background Mandala Watermarks */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-30">
-        <MandalaOrnament
-          size={500}
-          color="#D4AF37"
-          opacity={0.18}
-          spin={true}
-          className="absolute -top-24 -left-28 sm:left-4"
-        />
+      {/* Light, elegant animating Rangoli / Mandala Background Watermarks */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
+        {/* Top-left slow rotating golden rangoli */}
         <MandalaOrnament
           size={460}
-          color="#8B2635"
-          opacity={0.12}
+          color="#D4AF37"
+          opacity={0.13}
           spin={true}
-          className="absolute -bottom-20 -right-24 sm:right-6"
+          className="absolute -top-24 -left-20 sm:left-2"
         />
+        {/* Bottom-right slow rotating terracotta rangoli */}
+        <MandalaOrnament
+          size={420}
+          color="#8B2635"
+          opacity={0.09}
+          spin={true}
+          className="absolute -bottom-20 -right-20 sm:right-4"
+        />
+        {/* Center subtle warm glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-[#D4AF37]/5 blur-3xl"></div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10 pt-3 sm:pt-5">
 
         {/* Heritage Pill */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF7F2] border border-[#C29B38]/40 shadow-xs mb-4 text-xs font-semibold text-[#8C4320]">

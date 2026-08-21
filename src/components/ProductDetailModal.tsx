@@ -4,6 +4,7 @@ import { ProductVariant } from '../types';
 import { useCart } from '../context/CartContext';
 import { ProductVisual } from './ProductVisual';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
+import { CornerToranaAccent } from './ToranaArt';
 import { CornerMandala } from './MandalaArt';
 
 export const ProductDetailModal: React.FC = () => {
@@ -43,9 +44,11 @@ export const ProductDetailModal: React.FC = () => {
         className="bg-[#FAF7F2] w-full max-w-2xl max-h-[90vh] rounded-2xl shadow-2xl border border-[#E8DFD5] overflow-y-auto flex flex-col relative overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Subtle decorative corner mandalas */}
-        <CornerMandala position="top-right" size={130} color="#D4AF37" opacity={0.12} />
-        <CornerMandala position="bottom-left" size={120} color="#8B2635" opacity={0.08} />
+        {/* Subtle decorative corner mandalas & delicate Torana accents */}
+        <CornerMandala position="top-right" size={110} color="#D4AF37" opacity={0.1} />
+        <CornerMandala position="bottom-left" size={100} color="#8B2635" opacity={0.07} />
+        <CornerToranaAccent position="top-right" size={44} className="opacity-60" />
+        <CornerToranaAccent position="bottom-left" size={38} className="opacity-40" />
 
         {/* Close Button */}
         <button

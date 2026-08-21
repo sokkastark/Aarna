@@ -3,12 +3,29 @@ import { Heart, Sparkles, Home, ShieldCheck, Flame } from 'lucide-react';
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 import kitchenArtImg from '../assets/images/mysuru_kitchen_folkart_1787340085196.jpg';
+import { MandalaOrnament } from './MandalaArt';
 
 export const BrandStory: React.FC = () => {
   return (
-    <section id="story" className="py-14 md:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="story" className="py-14 md:py-20 max-w-6xl mx-auto px-4 sm:px-6 relative">
+      {/* Light Rangoli background motifs */}
+      <MandalaOrnament
+        size={340}
+        color="#D4AF37"
+        opacity={0.08}
+        spin={true}
+        className="absolute -top-10 -right-10 pointer-events-none select-none hidden sm:block"
+      />
+
       <div className="bg-gradient-to-br from-[#FAF7F2] via-[#F7EFE8] to-[#FAF7F2] rounded-3xl border border-[#E8DFD5] p-6 sm:p-10 md:p-14 relative overflow-hidden shadow-xs">
-        {/* Subtle background decoration */}
+        {/* Subtle background decoration with rotating Rangoli inside card */}
+        <MandalaOrnament
+          size={380}
+          color="#8B2635"
+          opacity={0.05}
+          spin={true}
+          className="absolute -bottom-24 -left-20 pointer-events-none select-none"
+        />
         <div className="absolute top-0 right-0 w-80 h-80 bg-[#C29B38]/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

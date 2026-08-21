@@ -1,7 +1,8 @@
 import React from 'react';
 import { ShoppingBag, MessageSquare, Flame, Truck, Sparkles } from 'lucide-react';
 import { BRAND_CONFIG } from '../config/brand';
-import { MandalaOrnament, CornerMandala } from './MandalaArt';
+import { ToranaRibbon, MarigoldFlower } from './ToranaArt';
+import { MandalaOrnament } from './MandalaArt';
 
 export const HowItWorks: React.FC = () => {
   const steps = [
@@ -32,20 +33,27 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-12 md:py-18 bg-[#F6EFE9] border-y border-[#E8DFD5] relative overflow-hidden">
-      {/* Background Mandala Watermarks */}
+    <section id="how-it-works" className="py-10 md:py-16 bg-[#F6EFE9] border-y border-[#E8DFD5] relative overflow-hidden">
+      {/* Light subtle rotating Rangoli in background */}
       <MandalaOrnament
-        size={360}
+        size={380}
         color="#8B2635"
         opacity={0.06}
-        className="absolute -top-16 -left-16 pointer-events-none"
+        spin={true}
+        className="absolute -top-16 -left-16 pointer-events-none select-none"
       />
       <MandalaOrnament
         size={400}
         color="#D4AF37"
-        opacity={0.08}
-        className="absolute -bottom-20 -right-20 pointer-events-none"
+        opacity={0.07}
+        spin={true}
+        className="absolute -bottom-20 -right-20 pointer-events-none select-none"
       />
+
+      {/* Top Torana Garland Ribbon */}
+      <div className="w-full relative z-10 -mt-2 mb-4 opacity-75">
+        <ToranaRibbon className="h-6 sm:h-8" />
+      </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -67,9 +75,14 @@ export const HowItWorks: React.FC = () => {
             return (
               <div
                 key={step.number}
-                className="bg-[#FAF7F2] rounded-2xl p-5 border border-[#E4D7CA] shadow-2xs hover:shadow-xs transition-all relative flex flex-col justify-between overflow-hidden"
+                className="bg-[#FAF7F2] rounded-2xl p-5 border border-[#E4D7CA] shadow-2xs hover:shadow-xs transition-all relative flex flex-col justify-between overflow-hidden group"
               >
-                <CornerMandala position="bottom-right" size={90} color="#D4AF37" opacity={0.1} />
+                {/* Corner Marigold flower */}
+                <div className="absolute top-2 right-2 opacity-25 group-hover:opacity-50 transition-opacity pointer-events-none">
+                  <svg viewBox="0 0 28 28" width="24" height="24">
+                    <MarigoldFlower cx={14} cy={14} r={10} color={idx % 2 === 0 ? 'yellow' : 'orange'} />
+                  </svg>
+                </div>
 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
@@ -92,7 +105,7 @@ export const HowItWorks: React.FC = () => {
 
                 <div className="mt-4 pt-3 border-t border-[#EFE8DF] flex items-center justify-between text-[11px] font-semibold text-[#234E35] relative z-10">
                   <span>Step {idx + 1} of 4</span>
-                  <MandalaOrnament size={16} color="#8B2635" opacity={0.5} />
+                  <span className="text-[#8C4320] font-medium">ಸಂತೃಪ್ತಿ ಖಾತರಿ</span>
                 </div>
               </div>
             );

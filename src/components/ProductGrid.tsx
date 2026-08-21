@@ -3,7 +3,8 @@ import { INITIAL_PRODUCTS } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { BRAND_CONFIG } from '../config/brand';
 import { Sparkles, Clock } from 'lucide-react';
-import { MandalaSectionDivider, MandalaOrnament } from './MandalaArt';
+import { ToranaSectionDivider } from './ToranaArt';
+import { MandalaOrnament } from './MandalaArt';
 
 export const ProductGrid: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -20,13 +21,21 @@ export const ProductGrid: React.FC = () => {
     : INITIAL_PRODUCTS.filter(p => p.category === selectedCategory);
 
   return (
-    <section id="products" className="py-12 md:py-18 max-w-6xl mx-auto px-4 sm:px-6 relative">
-      {/* Decorative background mandala accent */}
+    <section id="products" className="py-12 md:py-18 max-w-6xl mx-auto px-4 sm:px-6 relative overflow-hidden">
+      {/* Delicate background slow-rotating rangoli accent */}
       <MandalaOrnament
-        size={340}
+        size={360}
         color="#D4AF37"
-        opacity={0.08}
-        className="absolute top-10 right-4 pointer-events-none hidden lg:block"
+        opacity={0.07}
+        spin={true}
+        className="absolute top-8 right-2 pointer-events-none hidden md:block select-none"
+      />
+      <MandalaOrnament
+        size={320}
+        color="#8B2635"
+        opacity={0.05}
+        spin={true}
+        className="absolute bottom-12 -left-12 pointer-events-none hidden md:block select-none"
       />
 
       {/* Section Header */}
@@ -43,8 +52,12 @@ export const ProductGrid: React.FC = () => {
         </p>
       </div>
 
-      {/* Traditional Mandala Divider */}
-      <MandalaSectionDivider kannada="ಸಾಂಪ್ರದಾಯಿಕ ಮಸಾಲೆ ಪುಡಿಗಳು" className="mb-8" />
+      {/* Traditional Mango Leaves & Marigold Garland Divider */}
+      <ToranaSectionDivider
+        title="Traditional Spice Powders"
+        kannada="ಸಾಂಪ್ರದಾಯಿಕ ಮಸಾಲೆ ಪುಡಿಗಳು"
+        className="mb-8"
+      />
 
       {/* Small Batch Pre-Order Banner */}
       <div className="mb-8 p-3.5 sm:p-4 rounded-xl bg-[#F6EFE9] border border-[#DFCFC2] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-[#5C4A40] shadow-2xs">
