@@ -13,14 +13,14 @@ export const Footer: React.FC = () => {
       <MandalaOrnament
         size={360}
         color="#8B2635"
-        opacity={0.06}
+        opacity={0.03}
         spin={true}
         className="absolute -bottom-20 -right-20 pointer-events-none select-none"
       />
       <MandalaOrnament
         size={300}
         color="#D4AF37"
-        opacity={0.08}
+        opacity={0.04}
         spin={true}
         className="absolute top-10 -left-16 pointer-events-none select-none"
       />

@@ -12,7 +12,7 @@ export const BrandStory: React.FC = () => {
       <MandalaOrnament
         size={340}
         color="#D4AF37"
-        opacity={0.08}
+        opacity={0.04}
         spin={true}
         className="absolute -top-10 -right-10 pointer-events-none select-none hidden sm:block"
       />
@@ -22,7 +22,7 @@ export const BrandStory: React.FC = () => {
         <MandalaOrnament
           size={380}
           color="#8B2635"
-          opacity={0.05}
+          opacity={0.025}
           spin={true}
           className="absolute -bottom-24 -left-20 pointer-events-none select-none"
         />

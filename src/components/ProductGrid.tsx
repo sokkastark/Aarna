@@ -26,14 +26,14 @@ export const ProductGrid: React.FC = () => {
       <MandalaOrnament
         size={360}
         color="#D4AF37"
-        opacity={0.07}
+        opacity={0.035}
         spin={true}
         className="absolute top-8 right-2 pointer-events-none hidden md:block select-none"
       />
       <MandalaOrnament
         size={320}
         color="#8B2635"
-        opacity={0.05}
+        opacity={0.025}
         spin={true}
         className="absolute bottom-12 -left-12 pointer-events-none hidden md:block select-none"
       />

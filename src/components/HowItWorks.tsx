@@ -38,14 +38,14 @@ export const HowItWorks: React.FC = () => {
       <MandalaOrnament
         size={380}
         color="#8B2635"
-        opacity={0.06}
+        opacity={0.03}
         spin={true}
         className="absolute -top-16 -left-16 pointer-events-none select-none"
       />
       <MandalaOrnament
         size={400}
         color="#D4AF37"
-        opacity={0.07}
+        opacity={0.035}
         spin={true}
         className="absolute -bottom-20 -right-20 pointer-events-none select-none"
       />
@@ -77,13 +77,6 @@ export const HowItWorks: React.FC = () => {
                 key={step.number}
                 className="bg-[#FAF7F2] rounded-2xl p-5 border border-[#E4D7CA] shadow-2xs hover:shadow-xs transition-all relative flex flex-col justify-between overflow-hidden group"
               >
-                {/* Corner Marigold flower */}
-                <div className="absolute top-2 right-2 opacity-25 group-hover:opacity-50 transition-opacity pointer-events-none">
-                  <svg viewBox="0 0 28 28" width="24" height="24">
-                    <MarigoldFlower cx={14} cy={14} r={10} color={idx % 2 === 0 ? 'yellow' : 'orange'} />
-                  </svg>
-                </div>
-
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#8B2635] text-[#FAF7F2] flex items-center justify-center shadow-xs">

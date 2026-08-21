@@ -1,8 +1,12 @@
 import React from 'react';
-import { ArrowDown, MessageCircle, Heart, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, MessageCircle, Sparkles, CheckCircle2, Heart } from 'lucide-react';
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 import heroMuralImg from '../assets/images/mysuru_heritage_mural_1787340068067.jpg';
+import puliyogareImg from '../assets/images/puliyogare_powder_1787339731415.jpg';
+import vangiBathImg from '../assets/images/vangi_bath_powder_1787339748872.jpg';
+import bisiBeleBathImg from '../assets/images/bisibelebath_powder_1787339763697.jpg';
+import chitrannaImg from '../assets/images/chitranna_mix_1787339778424.jpg';
 import { ToranaGarlandBanner } from './ToranaArt';
 import { MandalaOrnament } from './MandalaArt';
 
@@ -20,7 +24,7 @@ export const Hero: React.FC = () => {
         <MandalaOrnament
           size={460}
           color="#D4AF37"
-          opacity={0.13}
+          opacity={0.065}
           spin={true}
           className="absolute -top-24 -left-20 sm:left-2"
         />
@@ -28,7 +32,7 @@ export const Hero: React.FC = () => {
         <MandalaOrnament
           size={420}
           color="#8B2635"
-          opacity={0.09}
+          opacity={0.045}
           spin={true}
           className="absolute -bottom-20 -right-20 sm:right-4"
         />
@@ -102,15 +106,15 @@ export const Hero: React.FC = () => {
           </a>
         </div>
 
-        {/* Quick visual preview of the 4 spice blends */}
+        {/* Quick visual preview of the 4 spice blends with ESM imported images */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-3xl mx-auto mb-10 text-left">
           <a
             href="#products"
             className="group/pill p-2 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE1] border border-[#E8DFD5] transition-all flex items-center gap-2.5 shadow-2xs hover:shadow-xs"
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40">
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40 bg-[#2C2420]">
               <img
-                src="/src/assets/images/puliyogare_powder_1787339731415.jpg"
+                src={puliyogareImg}
                 alt="Puliyogare Powder"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/pill:scale-110 transition-transform duration-300"
@@ -126,9 +130,9 @@ export const Hero: React.FC = () => {
             href="#products"
             className="group/pill p-2 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE1] border border-[#E8DFD5] transition-all flex items-center gap-2.5 shadow-2xs hover:shadow-xs"
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40">
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40 bg-[#2C2420]">
               <img
-                src="/src/assets/images/vangi_bath_powder_1787339748872.jpg"
+                src={vangiBathImg}
                 alt="Vangi Bath Powder"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/pill:scale-110 transition-transform duration-300"
@@ -144,9 +148,9 @@ export const Hero: React.FC = () => {
             href="#products"
             className="group/pill p-2 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE1] border border-[#E8DFD5] transition-all flex items-center gap-2.5 shadow-2xs hover:shadow-xs"
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40">
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40 bg-[#2C2420]">
               <img
-                src="/src/assets/images/bisibelebath_powder_1787339763697.jpg"
+                src={bisiBeleBathImg}
                 alt="Bisi Bele Bath Powder"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/pill:scale-110 transition-transform duration-300"
@@ -162,9 +166,9 @@ export const Hero: React.FC = () => {
             href="#products"
             className="group/pill p-2 rounded-xl bg-[#FAF7F2] hover:bg-[#F5EBE1] border border-[#E8DFD5] transition-all flex items-center gap-2.5 shadow-2xs hover:shadow-xs"
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40">
+            <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-[#C29B38]/40 bg-[#2C2420]">
               <img
-                src="/src/assets/images/chitranna_mix_1787339778424.jpg"
+                src={chitrannaImg}
                 alt="Lemon Rice Chitranna Mix"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover/pill:scale-110 transition-transform duration-300"

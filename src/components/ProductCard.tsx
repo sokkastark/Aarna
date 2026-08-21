@@ -3,8 +3,6 @@ import { ShoppingBag, Eye, Check, Sparkles } from 'lucide-react';
 import { Product, ProductVariant } from '../types';
 import { useCart } from '../context/CartContext';
 import { ProductVisual } from './ProductVisual';
-import { CornerToranaAccent } from './ToranaArt';
-import { CornerMandala } from './MandalaArt';
 
 interface ProductCardProps {
   product: Product;
@@ -31,22 +29,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       onClick={() => openProductModal(product)}
       className="group bg-[#FAF7F2] rounded-2xl border border-[#E8DFD5] hover:border-[#C29B38]/60 p-4 sm:p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md cursor-pointer relative overflow-hidden"
     >
-      {/* Light Corner Mandala watermark & subtle Corner Torana Accent */}
-      <CornerMandala position="top-right" size={90} color="#D4AF37" opacity={0.08} className="group-hover:opacity-20 transition-opacity" />
-      <CornerToranaAccent position="top-right" size={38} className="opacity-45 group-hover:opacity-85 transition-opacity" />
-
-      {/* Top badges */}
-      <div className="flex items-center justify-between gap-2 mb-3 relative z-10">
-
+      {/* Top badges - single line strictly maintained */}
+      <div className="flex items-center justify-between gap-1.5 mb-3 relative z-10">
         {product.badge ? (
-          <span className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8B2635] text-[#FAF7F2] shadow-2xs">
-            <Sparkles className="w-3 h-3 text-[#D4AF37]" />
-            {product.badge}
+          <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8B2635] text-[#FAF7F2] shadow-2xs whitespace-nowrap shrink-0">
+            <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#D4AF37] shrink-0" />
+            <span className="whitespace-nowrap">{product.badge}</span>
           </span>
         ) : <span />}
 
-        <span className="text-[11px] font-semibold text-[#234E35] bg-[#EBF2EC] border border-[#B8D5C0] px-2 py-0.5 rounded-full">
-          Pre-Order Fresh
+        <span className="text-[10px] sm:text-[11px] font-semibold text-[#234E35] bg-[#EBF2EC] border border-[#B8D5C0] px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
+          Pre-Order
         </span>
       </div>
 
