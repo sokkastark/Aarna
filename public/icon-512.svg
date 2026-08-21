@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#8B2635"/>
+  <circle cx="256" cy="256" r="210" fill="#FAF7F2" stroke="#D4AF37" stroke-width="6"/>
+  <!-- Decorative Heritage Arch / Motif -->
+  <path d="M256 110 C 275 145, 310 160, 310 185 C 310 215, 275 225, 256 260 C 237 225, 202 215, 202 185 C 202 160, 237 145, 256 110 Z" fill="#C29B38" opacity="0.9"/>
+  <!-- A Lettermark -->
+  <text x="256" y="325" font-family="'Marcellus', 'Playfair Display', Georgia, serif" font-size="160" font-weight="bold" fill="#8B2635" text-anchor="middle">A</text>
+  <text x="256" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="bold" fill="#234E35" text-anchor="middle" letter-spacing="6">AARNA</text>
+  <text x="256" y="415" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="600" fill="#A0522D" text-anchor="middle" letter-spacing="4">FOOD PRODUCTS • MYSURU</text>
+</svg>

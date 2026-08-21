@@ -1,0 +1,6 @@
+{
+  "name": "Aarna Food Products",
+  "description": "Authentic Mysuru flavours and traditional homemade food products handcrafted in small batches. Order easily on WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
