@@ -27,18 +27,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <div
       id={`product-card-${product.id}`}
       onClick={() => openProductModal(product)}
-      className="group bg-[#FAF7F2] rounded-2xl border border-[#E8DFD5] hover:border-[#C29B38]/60 p-4 sm:p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md cursor-pointer relative overflow-hidden"
+      className="group bg-[#FFFFFF] rounded-2xl border border-[#EAE2D8] hover:border-[#C29B38]/70 p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md cursor-pointer relative overflow-hidden"
     >
-      {/* Top badges - single line strictly maintained */}
-      <div className="flex items-center justify-between gap-1.5 mb-3 relative z-10">
+      {/* Top badges */}
+      <div className="flex items-center justify-between gap-1.5 mb-3.5 relative z-10">
         {product.badge ? (
-          <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8B2635] text-[#FAF7F2] shadow-2xs whitespace-nowrap shrink-0">
-            <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#D4AF37] shrink-0" />
+          <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8B2635] text-[#FAF7F2] shadow-2xs whitespace-nowrap shrink-0">
+            <Sparkles className="w-2.5 h-2.5 text-[#D4AF37] shrink-0" />
             <span className="whitespace-nowrap">{product.badge}</span>
           </span>
         ) : <span />}
 
-        <span className="text-[10px] sm:text-[11px] font-semibold text-[#234E35] bg-[#EBF2EC] border border-[#B8D5C0] px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
+        <span className="text-[10px] font-semibold text-[#234E35] bg-[#EBF2EC] border border-[#B8D5C0] px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
           Pre-Order
         </span>
       </div>
@@ -50,7 +50,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
       {/* Product Information */}
       <div className="flex-1 flex flex-col">
-        <div className="flex items-baseline justify-between gap-2 mb-1">
+        <div className="flex items-baseline justify-between gap-2 mb-0.5">
           <h3 className="font-serif-title text-xl sm:text-2xl font-bold text-[#2C2420] group-hover:text-[#8B2635] transition-colors">
             {product.name}
           </h3>
@@ -67,13 +67,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </p>
 
         {/* Variant / Size Selector */}
-        <div className="mt-auto pt-3 border-t border-[#EFE8DF]">
+        <div className="mt-auto pt-3 border-t border-[#F0EAE1]">
           <div className="flex items-center justify-between text-xs text-[#5A4D46] mb-2">
-            <span className="font-semibold">Select Size:</span>
+            <span className="font-medium text-[#7A6D65]">Select Weight:</span>
             {selectedVariant.pricePlaceholder && (
-              <span className="text-[11px] font-medium text-[#8C4320]">
-                {selectedVariant.pricePlaceholder}{' '}
-                <span className="text-[9px] text-[#8C7A70]">(Est. placeholder)</span>
+              <span className="text-sm font-bold text-[#8B2635]">
+                {selectedVariant.pricePlaceholder}
               </span>
             )}
           </div>
@@ -92,7 +91,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                   className={`py-1.5 px-2 text-xs font-bold rounded-lg transition-all cursor-pointer text-center ${
                     isSelected
                       ? 'bg-[#8B2635] text-[#FAF7F2] shadow-xs'
-                      : 'bg-[#F2ECE4] text-[#4A3E39] hover:bg-[#E8DFC] border border-[#E0D5C7]'
+                      : 'bg-[#F6EFE9] text-[#4A3E39] hover:bg-[#EFE5DB] border border-[#E5DACE]'
                   }`}
                 >
                   {variant.weight}
@@ -115,7 +114,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               {addedAnimation ? (
                 <>
                   <Check className="w-4 h-4" />
-                  <span>Added to Cart</span>
+                  <span>Added</span>
                 </>
               ) : (
                 <>
@@ -132,7 +131,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 openProductModal(product);
               }}
               title="View Ingredients & Details"
-              className="col-span-1 flex items-center justify-center p-2.5 rounded-xl bg-[#F2ECE4] hover:bg-[#E8DFD5] text-[#4A3E39] border border-[#DDD3C7] transition-colors cursor-pointer"
+              className="col-span-1 flex items-center justify-center p-2.5 rounded-xl bg-[#F6EFE9] hover:bg-[#EFE5DB] text-[#4A3E39] border border-[#E5DACE] transition-colors cursor-pointer"
               aria-label={`View details for ${product.name}`}
             >
               <Eye className="w-4 h-4" />
@@ -143,3 +142,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     </div>
   );
 };
+

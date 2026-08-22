@@ -1,22 +1,24 @@
 import { Product } from '../types';
-import puliyogareImg from '../assets/images/puliyogare_powder_1787339731415.jpg';
+import puliyogarePasteImg from '../assets/images/puliyogare_paste_1787377095868.jpg';
 import vangiBathImg from '../assets/images/vangi_bath_powder_1787339748872.jpg';
 import bisiBeleBathImg from '../assets/images/bisibelebath_powder_1787339763697.jpg';
-import chitrannaImg from '../assets/images/chitranna_mix_1787339778424.jpg';
+import chatniPudiImg from '../assets/images/chatni_pudi_1787377112072.jpg';
+import sambarPowderImg from '../assets/images/sambar_powder_1787377123649.jpg';
+import rasamPowderImg from '../assets/images/rasam_powder_1787377135166.jpg';
 
 export const INITIAL_PRODUCTS: Product[] = [
   {
-    id: "puliyogare-powder",
-    name: "Puliyogare Powder",
-    kannadaName: "ಹುಳಿಯೋಗರೆ ಪುಡಿ",
-    tagline: "Tangy • Spiced • Traditional",
-    shortDescription: "Signature temple-style tamarind rice spice blend with roasted lentils, sesame, and aromatic spices.",
-    description: "Our Puliyogare Powder is crafted following the revered Mysuru temple tradition. Slow-roasted Byadagi chillies, selected coriander seeds, black sesame, fenugreek, and warming spices are hand-ground to deliver that deep crimson color, signature tang, and earthy spice that makes every plate of tamarind rice unforgettable.",
-    category: "Traditional Powders",
+    id: "puliyogare-paste",
+    name: "Puliyogre Paste",
+    kannadaName: "ಪುಳಿಯೋಗರೆ ಗೊಜ್ಜು / ಪೇಸ್ಟ್",
+    tagline: "Rich • Tangy • Temple Recipe",
+    shortDescription: "Signature temple-style tamarind gojju simmered with gingelly oil, roasted peanuts, curry leaves, and secret spices.",
+    description: "Our Puliyogare Paste (Gojju) is prepared the authentic traditional way—slow-cooked with thick ripe tamarind extract, pure cold-pressed sesame oil, organic jaggery, crisp peanuts, and our secret temple-blend spices. Ready to mix directly with hot steamed rice with zero extra cooking needed.",
+    category: "Pastes & Chutney Podis",
     available: true,
     availabilityNote: "Fresh batch made on pre-order",
-    imageUrl: puliyogareImg,
-    badge: "Mysuru Classic",
+    imageUrl: puliyogarePasteImg,
+    badge: "Mysuru Temple Style",
     themeColor: {
       bg: "bg-[#F7EBE8]",
       text: "text-[#7B1E28]",
@@ -25,36 +27,78 @@ export const INITIAL_PRODUCTS: Product[] = [
       pillText: "text-[#FAF7F2]"
     },
     variants: [
-      { id: "100g", weight: "100g", pricePlaceholder: "₹80" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹190", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹360" }
+      { id: "100g", weight: "100g", pricePlaceholder: "₹110" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹250", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹480" }
     ],
     highlights: [
-      "Authentic Mysuru temple-style recipe",
-      "Rich color with genuine Byadagi chillies",
-      "Roasted sesame and chana dal aroma",
-      "Ready in minutes with hot steamed rice"
+      "Ready-to-eat instant tamarind gojju paste",
+      "Slow-simmered in pure cold-pressed sesame oil",
+      "Loaded with crunchy roasted peanuts and curry leaves",
+      "Authentic Melukote & Mysuru temple flavor profile"
     ],
     ingredientsPlaceholder: [
-      "Byadagi & Guntur Dried Red Chillies",
-      "Coriander Seeds (Dhaniya)",
-      "Bengal Gram & Urad Dal",
-      "Black Sesame Seeds",
-      "Fenugreek & Cumin Seeds",
-      "Asafoetida (Hing)",
-      "Curry Leaves & Mustard"
+      "Thick Tamarind Extract",
+      "Cold-Pressed Sesame (Gingelly) Oil",
+      "Roasted Peanuts & Mustard Seeds",
+      "Byadagi Red Chillies & Fenugreek",
+      "Organic Jaggery (Bella)",
+      "Curry Leaves & Asafoetida (Hing)",
+      "Rock Salt"
     ],
-    servingSuggestion: "Toss 2 tablespoons of powder in hot sesame oil with peanuts and curry leaves, mix gently with cooked rice, and let it rest for 15 minutes for flavors to deepen.",
-    flavorNotes: ["Tamarind Tang", "Warming Spice", "Nutty Sesame", "Tempered Crunch"]
+    servingSuggestion: "Mix 2-3 tablespoons of paste directly with warm cooked rice. Let it rest for 15 minutes before serving so the flavors permeate the grains.",
+    flavorNotes: ["Rich Tamarind Tang", "Nutty Peanut Crunch", "Warm Sesame Aroma", "Subtle Jaggery Balance"]
+  },
+  {
+    id: "bisi-bele-bath-powder",
+    name: "Bisibele bath powder",
+    kannadaName: "ಬಿಸಿಬೇಳೆಭಾತ್ ಪುಡಿ",
+    tagline: "Comforting • Spiced • Classic",
+    shortDescription: "The soul of Karnataka cuisine: a complex blend of 14 roasted spices, kapok buds, and lentils for rich lentil-rice.",
+    description: "Nothing spells Mysuru home cooking quite like steaming hot Bisi Bele Bath topped with pure ghee. Our special masala powder is meticulously slow-roasted on an iron griddle using 14 traditional spices, marathi moggu (kapok buds), stone flower, and roasted lentils to create a deeply comforting one-pot feast.",
+    category: "Rice Masala Powders",
+    available: true,
+    availabilityNote: "Fresh batch made on pre-order",
+    imageUrl: bisiBeleBathImg,
+    badge: "Karnataka Signature",
+    themeColor: {
+      bg: "bg-[#F7EFE8]",
+      text: "text-[#8C4320]",
+      border: "border-[#DFBFAD]",
+      pillBg: "bg-[#8C4320]",
+      pillText: "text-[#FAF7F2]"
+    },
+    variants: [
+      { id: "100g", weight: "100g", pricePlaceholder: "₹85" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹200", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹380" }
+    ],
+    highlights: [
+      "14 heritage spices including Kapok Buds (Marathi Moggu)",
+      "Slow-roasted for rich golden-brown depth",
+      "Creates the comforting aroma of authentic Mysuru feasts",
+      "Pairs delightfully with boondi or potato chips"
+    ],
+    ingredientsPlaceholder: [
+      "Byadagi & Salem Chillies",
+      "Coriander Seeds & Cumin",
+      "Toor Dal & Chana Dal",
+      "Marathi Moggu (Kapok Buds)",
+      "Dry Coconut, Cinnamon, Cloves",
+      "Fenugreek, Mustard & Curry Leaves",
+      "Nutmeg hint & Asafoetida"
+    ],
+    servingSuggestion: "Simmer cooked rice, toor dal, and vegetables with tamarind pulp and 3 tablespoons of Bisi Bele Bath powder. Finish with hot homemade ghee and crisp kara boondi.",
+    flavorNotes: ["Rich Spiced Lentil", "Kapok Bud Aromatics", "Mellow Tamarind Tang", "Ghee Complement"]
   },
   {
     id: "vangi-bath-powder",
-    name: "Vangi Bath Powder",
+    name: "vangibath powder",
     kannadaName: "ವಾಂಗಿಬಾತ್ ಪುಡಿ",
     tagline: "Aromatic • Rich • Flavourful",
-    shortDescription: "Aromatic spiced blend with cloves, cinnamon, and roasted dry coconut for classic brinjal/capsicum rice.",
-    description: "A staple in traditional Karnataka festive feasts, our Vangi Bath Powder brings together fragrant whole spices—cloves, cinnamon bark, cardamom, and roasted dry coconut (kobbari)—with roasted lentils. It gives tender brinjals or capsicum a deeply aromatic, rich coating that pairs magnificently with warm rice.",
-    category: "Bath Powders",
+    shortDescription: "Aromatic spiced blend with cloves, cinnamon bark, and roasted dry coconut for classic brinjal & capsicum rice.",
+    description: "A staple in traditional Karnataka festive feasts, our Vangi Bath Powder brings together fragrant whole spices—cloves, cinnamon bark, cardamom, and roasted dry coconut (kobbari)—with roasted lentils. It gives tender brinjals or capsicum a deeply aromatic coating that pairs magnificently with warm rice.",
+    category: "Rice Masala Powders",
     available: true,
     availabilityNote: "Fresh batch made on pre-order",
     imageUrl: vangiBathImg,
@@ -89,59 +133,17 @@ export const INITIAL_PRODUCTS: Product[] = [
     flavorNotes: ["Clove & Cinnamon Aroma", "Toasted Coconut", "Balanced Mild Heat", "Herbaceous"]
   },
   {
-    id: "bisi-bele-bath-powder",
-    name: "Bisi Bele Bath Powder",
-    kannadaName: "ಬಿಸಿಬೇಳೆಭಾತ್ ಪುಡಿ",
-    tagline: "Comforting • Spiced • Classic",
-    shortDescription: "The soul of Karnataka cuisine: a complex blend of 14 roasted spices and lentils for rich lentil-rice porridge.",
-    description: "Nothing spells Mysuru home cooking quite like steaming hot Bisi Bele Bath topped with pure ghee. Our special masala powder is meticulously slow-roasted on a stone griddle using 14 traditional spices, marathi moggu (kapok buds), stone flower, and roasted lentils to create a wholesome, deeply comforting one-pot feast.",
-    category: "Bath Powders",
+    id: "chatni-pudi",
+    name: "ChatniPudi",
+    kannadaName: "ಚಟ್ನಿ ಪುಡಿ",
+    tagline: "Crunchy • Savoury • Everyday Essential",
+    shortDescription: "Classic Karnataka spiced gunpowder with roasted lentils, dry coconut copra, curry leaves, and Byadagi chillies.",
+    description: "A quintessential accompaniment in every South Indian home. Coarsely ground roasted Bengal gram, urad dal, fragrant curry leaves, roasted dry copra (kobbari), and Byadagi red chillies. Perfect with hot idlis, crispy dosas, akki rotti, or mixed with hot rice and melted ghee.",
+    category: "Pastes & Chutney Podis",
     available: true,
     availabilityNote: "Fresh batch made on pre-order",
-    imageUrl: bisiBeleBathImg,
-    badge: "Karnataka Signature",
-    themeColor: {
-      bg: "bg-[#F7EFE8]",
-      text: "text-[#8C4320]",
-      border: "border-[#DFBFAD]",
-      pillBg: "bg-[#8C4320]",
-      pillText: "text-[#FAF7F2]"
-    },
-    variants: [
-      { id: "100g", weight: "100g", pricePlaceholder: "₹90" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹210", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹400" }
-    ],
-    highlights: [
-      "14 heritage spices including Kapok Buds (Marathi Moggu)",
-      "Slow-roasted for rich golden-brown depth",
-      "Creates the comforting texture and aroma of authentic Mysuru hotel style",
-      "Pairs delightfully with boondi or potato chips"
-    ],
-    ingredientsPlaceholder: [
-      "Byadagi & Salem Chillies",
-      "Coriander Seeds & Cumin",
-      "Toor Dal & Chana Dal",
-      "Marathi Moggu (Kapok Buds)",
-      "Dry Coconut, Cinnamon, Cloves",
-      "Fenugreek, Mustard & Curry Leaves",
-      "Nutmeg hint & Asafoetida"
-    ],
-    servingSuggestion: "Simmer cooked rice, toor dal, and seasonal vegetables with tamarind pulp and 3 tablespoons of Bisi Bele Bath powder. Finish with a generous drizzle of hot homemade ghee and crisp kara boondi.",
-    flavorNotes: ["Rich Spiced Lentil", "Kapok Bud Aromatics", "Mellow Tamarind Tang", "Ghee Complement"]
-  },
-  {
-    id: "lemon-rice-chitranna-mix",
-    name: "Lemon Rice / Chitranna Mix",
-    kannadaName: "ಚಿತ್ರಾನ್ನ ಮಿಕ್ಸ್ / ಪೌಡರ್",
-    tagline: "Fresh • Zesty • Easy",
-    shortDescription: "A vibrant, zesty traditional mix with turmeric, mustard, roasted lentils, and ginger-spice undertones.",
-    description: "Chitranna (Lemon Rice) is the heartwarming, bright yellow celebratory dish of Karnataka homes. Our instant Chitranna mix packs the authentic seasoning of mustard seeds, golden split lentils, green chilli notes, turmeric, and dried ginger so you can prepare fragrant, zesty lemon rice in just 2 minutes with leftover or fresh rice.",
-    category: "Quick Mixes",
-    available: true,
-    availabilityNote: "Fresh batch made on pre-order",
-    imageUrl: chitrannaImg,
-    badge: "Quick & Refreshing",
+    imageUrl: chatniPudiImg,
+    badge: "Daily Essential",
     themeColor: {
       bg: "bg-[#FAF5E6]",
       text: "text-[#8A6A15]",
@@ -150,25 +152,110 @@ export const INITIAL_PRODUCTS: Product[] = [
       pillText: "text-[#FAF7F2]"
     },
     variants: [
-      { id: "100g", weight: "100g", pricePlaceholder: "₹75" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹175", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹330" }
+      { id: "100g", weight: "100g", pricePlaceholder: "₹70" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹160", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹300" }
     ],
     highlights: [
-      "Ready in 2 minutes with fresh lemon juice",
-      "Crisp roasted lentils & roasted groundnut aroma",
-      "Pure golden organic turmeric & tempered spices",
-      "Perfect for lunchboxes, quick breakfasts, and travel"
+      "Coarsely ground for satisfying crunch",
+      "Toasted dry coconut copra & sun-dried curry leaves",
+      "Pairs with Idli, Dosa, Akki Rotti, Ragi Mudde & Hot Rice",
+      "Made fresh in small batches"
     ],
     ingredientsPlaceholder: [
-      "Pure Salem Turmeric (Haldi)",
       "Roasted Chana Dal & Urad Dal",
-      "Mustard Seeds & Cumin",
-      "Green Chilli Notes & Dry Ginger",
-      "Curry Leaf Flakes & Hing",
+      "Dry Coconut Copra (Kobbari)",
+      "Byadagi Red Chillies",
+      "Freshly Toasted Curry Leaves",
+      "Cumin Seeds & Asafoetida",
+      "Tamarind Hint & Jaggery Touch",
       "Rock Salt"
     ],
-    servingSuggestion: "Warm 1 tbsp oil, add 2 tbsp Chitranna mix, toss with warm rice, and squeeze 1/2 fresh lemon with chopped coriander for an instant Mysuru breakfast.",
-    flavorNotes: ["Bright Lemon Zest", "Crunchy Dal Tempering", "Warm Turmeric", "Ginger Spark"]
+    servingSuggestion: "Sprinkle generously over hot ghee dosas, or mix with coconut oil or warm ghee and enjoy alongside steaming idlis and akki rotti.",
+    flavorNotes: ["Roasted Dal Crunch", "Toasted Coconut", "Mild Smoky Chillies", "Savory Umami"]
+  },
+  {
+    id: "sambar-powder",
+    name: "Sambar Powder(Huli Pudi)",
+    kannadaName: "ಸಾಂಬಾರ್ ಪುಡಿ (ಹುಳಿ ಪುಡಿ)",
+    tagline: "Aromatic • Authentic • Homestyle",
+    shortDescription: "Traditional Karnataka homestyle Huli Pudi with roasted coriander, fenugreek, cumin, and vibrant Byadagi chillies.",
+    description: "Our Sambar Powder (Huli Pudi) is the heartbeat of everyday Karnataka cooking. Roasted whole coriander seeds, cumin, fenugreek, black pepper, and Byadagi chillies give everyday vegetable sambars a vibrant color, comforting aroma, and rich, balanced flavor.",
+    category: "Curry & Rasam Powders",
+    available: true,
+    availabilityNote: "Fresh batch made on pre-order",
+    imageUrl: sambarPowderImg,
+    badge: "Homestyle Huli",
+    themeColor: {
+      bg: "bg-[#FDF2E9]",
+      text: "text-[#9C3814]",
+      border: "border-[#E8C2B0]",
+      pillBg: "bg-[#9C3814]",
+      pillText: "text-[#FAF7F2]"
+    },
+    variants: [
+      { id: "100g", weight: "100g", pricePlaceholder: "₹80" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹190", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹360" }
+    ],
+    highlights: [
+      "Slow-roasted whole coriander & fenugreek aroma",
+      "Authentic Karnataka Brahmin household formula",
+      "Vibrant natural color with Byadagi chillies",
+      "Ideal for drumstick, mixed veg, and lentil sambars"
+    ],
+    ingredientsPlaceholder: [
+      "Whole Coriander Seeds (Dhaniya)",
+      "Byadagi & Guntur Red Chillies",
+      "Bengal Gram (Chana Dal)",
+      "Cumin Seeds & Fenugreek (Menthya)",
+      "Black Peppercorns & Turmeric",
+      "Curry Leaves & Asafoetida (Hing)"
+    ],
+    servingSuggestion: "Add 2 spoonfuls when boiling vegetables and cooked toor dal with tamarind and salt. Simmer for 5 minutes and finish with mustard and ghee tadka.",
+    flavorNotes: ["Deep Coriander Aroma", "Mellow Fenugreek Warmth", "Balanced Spice", "Lentil Body"]
+  },
+  {
+    id: "rasam-powder",
+    name: "Rasam powder",
+    kannadaName: "ಸಾರಿನ ಪುಡಿ / ರಸಂ ಪುಡಿ",
+    tagline: "Fiery • Aromatic • Soothing",
+    shortDescription: "Aromatic Saaru Pudi with crushed black peppercorns, roasted cumin, coriander, and hing for comforting South Indian Rasam.",
+    description: "Experience the soothing, digestive magic of authentic Mysuru Saaru (Rasam). Packed with freshly roasted Malabar black pepper, cumin seeds, coriander seeds, and a touch of asafoetida. It creates a piping-hot, soul-warming rasam that refreshes and satisfies.",
+    category: "Curry & Rasam Powders",
+    available: true,
+    availabilityNote: "Fresh batch made on pre-order",
+    imageUrl: rasamPowderImg,
+    badge: "Digestive & Soothing",
+    themeColor: {
+      bg: "bg-[#FDF0ED]",
+      text: "text-[#A82A2A]",
+      border: "border-[#EDBABA]",
+      pillBg: "bg-[#A82A2A]",
+      pillText: "text-[#FAF7F2]"
+    },
+    variants: [
+      { id: "100g", weight: "100g", pricePlaceholder: "₹75" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹170", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹320" }
+    ],
+    highlights: [
+      "Loaded with freshly roasted Malabar black pepper & cumin",
+      "Soothing digestive blend for authentic tomato & dal rasam",
+      "Deep aroma of roasted hing and curry leaves",
+      "Quick 5-minute traditional Mysuru Saaru"
+    ],
+    ingredientsPlaceholder: [
+      "Whole Black Peppercorns",
+      "Cumin Seeds (Jeerige)",
+      "Coriander Seeds (Dhaniya)",
+      "Byadagi Red Chillies",
+      "Toor Dal & Chana Dal",
+      "Curry Leaves & Compounded Hing",
+      "Salem Turmeric"
+    ],
+    servingSuggestion: "Boil crushed tomatoes with tamarind water, curry leaves, and 1.5 tsp Rasam Powder. Add boiled toor dal water, simmer till frothy, and temper with ghee, mustard, and cumin.",
+    flavorNotes: ["Peppery Warmth", "Cumin Earthiness", "Soothing Tang", "Aromatic Tempering"]
   }
 ];
+

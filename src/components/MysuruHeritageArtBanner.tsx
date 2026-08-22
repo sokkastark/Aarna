@@ -4,39 +4,36 @@ import folkBannerImg from '../assets/images/mysuru_folk_celebration_banner_17873
 
 export const MysuruHeritageArtBanner: React.FC = () => {
   return (
-    <section className="relative bg-[#3A1412] text-[#FAF7F2] overflow-hidden border-y-2 border-[#D4AF37]/50 shadow-inner">
-      {/* Decorative top pattern bar */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#D4AF37] via-[#E86A33] to-[#D4AF37]"></div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-5">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-[#8B2635] flex items-center justify-center border border-[#D4AF37]/60 text-[#D4AF37]">
+    <section className="bg-[#24130E] text-[#FAF7F2] py-12 md:py-16 border-y border-[#C29B38]/30">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-[#8B2635] flex items-center justify-center border border-[#D4AF37]/50 text-[#D4AF37]">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-serif-title text-lg sm:text-xl font-bold text-[#F4E1A4] tracking-wide">
+              <h3 className="font-serif-title text-xl sm:text-2xl font-bold text-[#F4E1A4] tracking-wide">
                 Heritage of Mysuru • ಮೈಸೂರು ಸಂಸ್ಕೃತಿ ಮತ್ತು ರುಚಿ
               </h3>
-              <p className="text-xs text-[#E0D0C0]">
-                Folk art depicting generations of traditional South Indian culinary celebration
+              <p className="text-xs text-[#D8C7B8] mt-0.5">
+                Generations of traditional South Indian culinary celebration and spice roasting
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-xs text-[#FAF7F2]/80 bg-black/25 px-3.5 py-1.5 rounded-full border border-white/10">
+          <div className="inline-flex items-center gap-2 text-xs text-[#FAF7F2]/90 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
             <Heart className="w-3.5 h-3.5 text-[#E86A33] fill-[#E86A33]" />
-            <span>Rooted in Mysuru Palace & Temple Town Heritage</span>
+            <span>Rooted in Mysuru Heritage</span>
           </div>
         </div>
 
         {/* Traditional Panoramic Folk Art Canvas */}
-        <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/60 shadow-xl group">
+        <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-xl group">
           <img
             src={folkBannerImg}
             alt="Traditional Mysuru folk art celebrating South Indian spice culture and culinary heritage"
             referrerPolicy="no-referrer"
-            className="w-full h-44 sm:h-64 md:h-80 object-cover object-center group-hover:scale-102 transition-transform duration-700 ease-out"
+            className="w-full h-48 sm:h-64 md:h-80 object-cover object-center group-hover:scale-101 transition-transform duration-700 ease-out"
           />
 
           {/* Vignette overlay */}
@@ -44,23 +41,21 @@ export const MysuruHeritageArtBanner: React.FC = () => {
 
           {/* Caption over the mural */}
           <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-5 sm:right-5 flex items-end justify-between pointer-events-none">
-            <div className="bg-[#2A100F]/85 backdrop-blur-xs px-3 py-1.5 rounded-lg border border-[#D4AF37]/40 text-left">
-              <span className="text-[11px] sm:text-xs font-serif-title font-semibold text-[#F4E1A4]">
+            <div className="bg-[#1C0E0B]/85 backdrop-blur-xs px-3 py-1.5 rounded-lg border border-[#D4AF37]/30 text-left">
+              <span className="text-xs font-serif-title font-semibold text-[#F4E1A4]">
                 ಮೈಸೂರು ಮನೆತನದ ಸಾಂಪ್ರದಾಯಿಕ ಮಸಾಲೆಗಳು
               </span>
-              <span className="hidden sm:inline-block text-[11px] text-[#E0D0C0] ml-2">
+              <span className="hidden sm:inline-block text-xs text-[#D8C7B8] ml-2">
                 — Traditional Karnataka Spice Roasting & Feast Traditions
               </span>
             </div>
-            <span className="text-[10px] text-[#FAF7F2]/70 bg-black/50 px-2 py-1 rounded">
-              Folk Art Series
+            <span className="text-[10px] text-[#FAF7F2]/80 bg-black/60 px-2.5 py-1 rounded">
+              Heritage Folk Art
             </span>
           </div>
         </div>
       </div>
-
-      {/* Decorative bottom pattern bar */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#D4AF37] via-[#8B2635] to-[#D4AF37]"></div>
     </section>
   );
 };
+

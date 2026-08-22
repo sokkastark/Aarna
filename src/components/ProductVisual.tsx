@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import puliyogareImg from '../assets/images/puliyogare_powder_1787339731415.jpg';
+import puliyogarePasteImg from '../assets/images/puliyogare_paste_1787377095868.jpg';
 import vangiBathImg from '../assets/images/vangi_bath_powder_1787339748872.jpg';
 import bisiBeleBathImg from '../assets/images/bisibelebath_powder_1787339763697.jpg';
-import chitrannaImg from '../assets/images/chitranna_mix_1787339778424.jpg';
+import chatniPudiImg from '../assets/images/chatni_pudi_1787377112072.jpg';
+import sambarPowderImg from '../assets/images/sambar_powder_1787377123649.jpg';
+import rasamPowderImg from '../assets/images/rasam_powder_1787377135166.jpg';
 
 interface ProductVisualProps {
   productId: string;
@@ -12,29 +14,41 @@ interface ProductVisualProps {
 }
 
 const PRODUCT_MEDIA: Record<string, { image: string; kannada: string; tag: string; bgGradient: string }> = {
-  'puliyogare-powder': {
-    image: puliyogareImg,
-    kannada: 'ಹುಳಿಯೋಗರೆ ಪುಡಿ',
-    tag: 'Temple-Style Tamarind Blend',
-    bgGradient: 'from-[#80221E]/80 to-transparent'
-  },
-  'vangi-bath-powder': {
-    image: vangiBathImg,
-    kannada: 'ವಾಂಗಿಬಾತ್ ಪುಡಿ',
-    tag: 'Aromatic Clove & Coconut',
-    bgGradient: 'from-[#234E35]/80 to-transparent'
+  'puliyogare-paste': {
+    image: puliyogarePasteImg,
+    kannada: 'ಪುಳಿಯೋಗರೆ ಗೊಜ್ಜು',
+    tag: 'Temple-Style Tamarind Gojju',
+    bgGradient: 'from-[#80221E]/85 to-transparent'
   },
   'bisi-bele-bath-powder': {
     image: bisiBeleBathImg,
     kannada: 'ಬಿಸಿಬೇಳೆಭಾತ್ ಪುಡಿ',
-    tag: '14 Heritage Spices',
-    bgGradient: 'from-[#8C4320]/80 to-transparent'
+    tag: '14 Heritage Spices & Kapok Buds',
+    bgGradient: 'from-[#8C4320]/85 to-transparent'
   },
-  'lemon-rice-chitranna-mix': {
-    image: chitrannaImg,
-    kannada: 'ಚಿತ್ರಾನ್ನ ಮಿಕ್ಸ್',
-    tag: 'Zesty Turmeric & Dal',
-    bgGradient: 'from-[#8A6A15]/80 to-transparent'
+  'vangi-bath-powder': {
+    image: vangiBathImg,
+    kannada: 'ವಾಂಗಿಬಾತ್ ಪುಡಿ',
+    tag: 'Aromatic Clove & Roasted Coconut',
+    bgGradient: 'from-[#234E35]/85 to-transparent'
+  },
+  'chatni-pudi': {
+    image: chatniPudiImg,
+    kannada: 'ಚಟ್ನಿ ಪುಡಿ',
+    tag: 'Spiced Lentil & Copra Gunpowder',
+    bgGradient: 'from-[#8A6A15]/85 to-transparent'
+  },
+  'sambar-powder': {
+    image: sambarPowderImg,
+    kannada: 'ಸಾಂಬಾರ್ (ಹುಳಿ) ಪುಡಿ',
+    tag: 'Homestyle Roasted Coriander & Fenugreek',
+    bgGradient: 'from-[#9C3814]/85 to-transparent'
+  },
+  'rasam-powder': {
+    image: rasamPowderImg,
+    kannada: 'ಸಾರಿನ (ರಸಂ) ಪುಡಿ',
+    tag: 'Crushed Malabar Pepper & Cumin',
+    bgGradient: 'from-[#A82A2A]/85 to-transparent'
   }
 };
 
@@ -45,7 +59,7 @@ export const ProductVisual: React.FC<ProductVisualProps> = ({
   className = ''
 }) => {
   const [imgError, setImgError] = useState(false);
-  const info = PRODUCT_MEDIA[productId] || PRODUCT_MEDIA['puliyogare-powder'];
+  const info = PRODUCT_MEDIA[productId] || PRODUCT_MEDIA['puliyogare-paste'];
   const src = imageUrl || info?.image;
 
   if (imgError || !src) {
