@@ -1,17 +1,30 @@
 import React from 'react';
-import { Heart, Sparkles, Home, ShieldCheck, Flame } from 'lucide-react';
+import {
+  Heart,
+  Sparkles,
+  Home,
+  ShieldCheck,
+  Flame,
+} from 'lucide-react';
+
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
+
 import kitchenArtImg from '../assets/images/mysuru_kitchen_folkart_1787340085196.jpg';
-import aarnaLogoImg from '../assets/images/aarna_brand_logo_1787379384432.jpg';
+import aarnaLogoImg from '../assets/images/aarna_brand_logo_1787379384432.png';
 
 export const BrandStory: React.FC = () => {
   return (
-    <section id="story" className="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6">
+    <section
+      id="story"
+      className="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6"
+    >
       <div className="bg-[#FFFFFF] rounded-3xl border border-[#EAE2D8] p-6 sm:p-10 md:p-12 shadow-2xs">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
           {/* Left Column: Brand Story Presentation & Folk Art */}
           <div className="lg:col-span-7 space-y-6">
+
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4EDE4] border border-[#D9CBBF] text-xs font-semibold text-[#8C4320]">
               <Heart className="w-3.5 h-3.5 text-[#8B2635] fill-[#8B2635]/20" />
               <span>Made with Love for Family</span>
@@ -37,12 +50,16 @@ export const BrandStory: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+
               <div className="space-y-1 text-left">
                 <div className="font-serif-title text-sm font-bold text-[#8B2635]">
                   ಸಾಂಪ್ರದಾಯಿಕ ಒಲೆ ಮತ್ತು ಹಿತ್ತಾಳೆ ಪಾತ್ರೆಗಳ ಪರಿಮಳ
                 </div>
+
                 <p className="text-xs text-[#5A4D46] leading-relaxed">
-                  Slow-roasting spices in heavy brass cookware enhances natural essential oils, delivering the distinct aroma of grandmother's kitchen in Mysuru.
+                  Slow-roasting spices in heavy brass cookware enhances natural
+                  essential oils, delivering the distinct aroma of grandmother's
+                  kitchen in Mysuru.
                 </p>
               </div>
             </div>
@@ -53,6 +70,7 @@ export const BrandStory: React.FC = () => {
                 <Home className="w-3.5 h-3.5" />
                 <span>Mysuru, Karnataka, India</span>
               </div>
+
               <div className="flex items-center gap-2 text-xs font-semibold text-[#8C4320] bg-[#FAF5E6] px-3.5 py-1.5 rounded-full border border-[#E8DAAA]">
                 <Flame className="w-3.5 h-3.5 text-[#C29B38]" />
                 <span>Slow Roasted in Small Batches</span>
@@ -62,19 +80,24 @@ export const BrandStory: React.FC = () => {
 
           {/* Right Column: Values & Kitchen Heritage Card */}
           <div className="lg:col-span-5 bg-[#FAF8F5] rounded-2xl p-6 sm:p-7 border border-[#EAE2D8] space-y-4">
+
             {/* Visual Wordmark / Heritage Badge */}
             <div className="text-center pb-4 border-b border-[#EAE2D8]">
-              <div className="w-16 h-16 mx-auto rounded-2xl overflow-hidden border border-[#D9CBBF] shadow-2xs bg-[#FAF7F2] mb-3">
+
+              {/* Aarna Logo - No Mask / No Border */}
+              <div className="w-16 h-16 mx-auto flex items-center justify-center mb-3">
                 <img
                   src={aarnaLogoImg}
                   alt="Aarna Food Products Official Logo"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain mix-blend-multiply"
                 />
               </div>
+
               <h3 className="font-serif-title text-xl font-bold text-[#8B2635]">
                 Aarna Food Products
               </h3>
+
               <p className="text-[11px] text-[#6B5E55] uppercase tracking-widest font-semibold mt-0.5">
                 Authentic Mysuru Flavours • Made at Home
               </p>
@@ -82,11 +105,20 @@ export const BrandStory: React.FC = () => {
 
             <div className="space-y-3 pt-1">
               {BRAND_CONFIG.story.pillars.map((pillar, i) => (
-                <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#EAE2D8]">
+                <div
+                  key={i}
+                  className="flex items-start gap-3 p-3.5 rounded-xl bg-[#FFFFFF] border border-[#EAE2D8]"
+                >
                   <ShieldCheck className="w-4 h-4 text-[#234E35] shrink-0 mt-0.5" />
+
                   <div>
-                    <h4 className="text-xs font-bold text-[#2C2420]">{pillar.title}</h4>
-                    <p className="text-[11px] text-[#6B5E55] mt-0.5 leading-snug">{pillar.description}</p>
+                    <h4 className="text-xs font-bold text-[#2C2420]">
+                      {pillar.title}
+                    </h4>
+
+                    <p className="text-[11px] text-[#6B5E55] mt-0.5 leading-snug">
+                      {pillar.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -103,10 +135,10 @@ export const BrandStory: React.FC = () => {
                 <span>Talk to Us on WhatsApp</span>
               </a>
             </div>
+
           </div>
         </div>
       </div>
     </section>
   );
 };
-
