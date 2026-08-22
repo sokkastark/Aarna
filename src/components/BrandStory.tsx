@@ -11,15 +11,17 @@ import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 
 import kitchenArtImg from '../assets/images/mysuru_kitchen_folkart_1787340085196.jpg';
-import aarnaLogoImg from '../assets/images/aarna_brand_logo_1787379384432.png';
+import arnaLogoLandImg from '../assets/images/Arna logo land.png';
+import { BrandStoryRangoli } from './SectionRangolis';
 
 export const BrandStory: React.FC = () => {
   return (
     <section
       id="story"
-      className="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6"
+      className="relative py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-hidden"
     >
-      <div className="bg-[#FFFFFF] rounded-3xl border border-[#EAE2D8] p-6 sm:p-10 md:p-12 shadow-2xs">
+      <BrandStoryRangoli />
+      <div className="bg-[#FFFFFF] rounded-3xl border border-[#EAE2D8] p-6 sm:p-10 md:p-12 shadow-2xs relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* Left Column: Brand Story Presentation & Folk Art */}
@@ -84,21 +86,17 @@ export const BrandStory: React.FC = () => {
             {/* Visual Wordmark / Heritage Badge */}
             <div className="text-center pb-4 border-b border-[#EAE2D8]">
 
-              {/* Aarna Logo - No Mask / No Border */}
-              <div className="w-16 h-16 mx-auto flex items-center justify-center mb-3">
+              {/* Aarna Logo Landscape Graphic */}
+              <div className="max-w-[180px] mx-auto flex items-center justify-center mb-2">
                 <img
-                  src={aarnaLogoImg}
+                  src={arnaLogoLandImg}
                   alt="Aarna Food Products Official Logo"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain mix-blend-multiply"
+                  className="w-full h-auto object-contain mix-blend-multiply"
                 />
               </div>
 
-              <h3 className="font-serif-title text-xl font-bold text-[#8B2635]">
-                Aarna Food Products
-              </h3>
-
-              <p className="text-[11px] text-[#6B5E55] uppercase tracking-widest font-semibold mt-0.5">
+              <p className="text-[11px] text-[#6B5E55] uppercase tracking-widest font-semibold mt-1">
                 Authentic Mysuru Flavours • Made at Home
               </p>
             </div>

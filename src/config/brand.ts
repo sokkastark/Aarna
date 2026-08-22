@@ -11,8 +11,13 @@ export const BRAND_CONFIG = {
   location: "Mysuru, Karnataka, India",
   
   // Configurable WhatsApp order number
-  whatsappNumber: "+919449371272", 
-  displayWhatsappNumber: "+91 94493 71272",
+  whatsappNumber: "+917996666344",
+  displayWhatsappNumber: "+91 79966 66344",
+
+  // Social & contact
+  instagramHandle: "@aarna.food",
+  instagramUrl: "https://www.instagram.com/aarna.food",
+  email: "info@aarnafood.com",
   
   // Pre-order notice
   preOrderNotice: "All products are prepared in small batches upon pre-order to ensure authentic taste and freshness.",

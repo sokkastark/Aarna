@@ -1,12 +1,18 @@
 import React from 'react';
-import { MessageCircle, MapPin, Sparkles, Heart } from 'lucide-react';
+import { MessageCircle, MapPin, Sparkles, Heart, Instagram, Mail } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
+import { FooterRangoli } from './SectionRangolis';
+import { ToranaGarland } from './ToranaGarland';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#F4EDE4] border-t border-[#E5DACE] text-[#4A3E39] py-12">
+    <footer id="contact" className="relative bg-[#F4EDE4] border-t border-[#E5DACE] text-[#4A3E39] pt-0 pb-12 relative z-10 overflow-hidden">
+      <div className="relative z-20 mb-4 opacity-85">
+        <ToranaGarland />
+      </div>
+      <FooterRangoli />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-[#DFD3C5]">
 
@@ -56,6 +62,26 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-[#234E35] shrink-0" />
                 <span>WhatsApp: {BRAND_CONFIG.displayWhatsappNumber}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-[#C13584] shrink-0" />
+                <a
+                  href={BRAND_CONFIG.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C13584] transition-colors"
+                >
+                  {BRAND_CONFIG.instagramHandle}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[#8B2635] shrink-0" />
+                <a
+                  href={`mailto:${BRAND_CONFIG.email}`}
+                  className="hover:text-[#8B2635] transition-colors"
+                >
+                  {BRAND_CONFIG.email}
+                </a>
               </div>
             </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShoppingBag, MessageSquare, Flame, Truck, Sparkles } from 'lucide-react';
 import { BRAND_CONFIG } from '../config/brand';
+import { HowItWorksRangoli } from './SectionRangolis';
 
 export const HowItWorks: React.FC = () => {
   const steps = [
@@ -31,8 +32,9 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-14 md:py-20 bg-[#FAF8F5] border-y border-[#EAE2D8]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="how-it-works" className="relative py-14 md:py-20 bg-[#FAF8F5] border-y border-[#EAE2D8] overflow-hidden">
+      <HowItWorksRangoli />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4EDE4] border border-[#D9CBBF] text-xs font-semibold text-[#8C4320] mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#C29B38]" />
@@ -52,7 +54,7 @@ export const HowItWorks: React.FC = () => {
             return (
               <div
                 key={step.number}
-                className="bg-[#FFFFFF] rounded-2xl p-6 border border-[#EAE2D8] shadow-2xs hover:shadow-sm transition-all flex flex-col justify-between"
+                className="bg-[#FFFFFF] rounded-2xl p-6 border border-[#EAE2D8] shadow-2xs hover:shadow-sm transition-all flex flex-col justify-between relative z-10"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

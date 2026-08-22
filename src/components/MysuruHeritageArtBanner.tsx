@@ -1,10 +1,16 @@
 import React from 'react';
 import { Sparkles, Heart } from 'lucide-react';
 import folkBannerImg from '../assets/images/mysuru_folk_celebration_banner_1787340104183.jpg';
+import { HeritageBannerRangoli } from './SectionRangolis';
+import { ToranaGarland } from './ToranaGarland';
 
 export const MysuruHeritageArtBanner: React.FC = () => {
   return (
-    <section className="bg-[#24130E] text-[#FAF7F2] py-12 md:py-16 border-y border-[#C29B38]/30">
+    <section className="relative bg-[#24130E] text-[#FAF7F2] pt-0 pb-12 md:pb-16 border-y border-[#C29B38]/30 relative z-10 overflow-hidden">
+      <div className="relative z-20 mb-4 opacity-90">
+        <ToranaGarland />
+      </div>
+      <HeritageBannerRangoli />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-3">

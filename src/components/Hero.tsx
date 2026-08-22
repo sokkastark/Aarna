@@ -3,11 +3,20 @@ import { ArrowDown, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
 import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 import heroMuralImg from '../assets/images/mysuru_heritage_mural_1787340068067.jpg';
+import { HeroRangoli, HeroRangoliBottomLeft } from './SectionRangolis';
+import { ToranaGarland } from './ToranaGarland';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative bg-[#FAF8F5] pt-8 sm:pt-12 pb-14 md:pb-20 border-b border-[#EAE2D8]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+    <section className="relative bg-[#FAF8F5] pt-0 pb-14 md:pb-20 border-b border-[#EAE2D8] overflow-hidden">
+      {/* Traditional Mango Leaf & Marigold Entrance Torana */}
+      <div className="relative z-20 mb-6">
+        <ToranaGarland />
+      </div>
+
+      <HeroRangoli />
+      <HeroRangoliBottomLeft />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
 
         {/* Small Heritage Pill */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F4EDE4] border border-[#D9CBBF] text-xs font-semibold text-[#8C4320] mb-5">

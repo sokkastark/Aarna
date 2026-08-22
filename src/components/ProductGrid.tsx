@@ -3,6 +3,7 @@ import { INITIAL_PRODUCTS } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { BRAND_CONFIG } from '../config/brand';
 import { Sparkles, Clock } from 'lucide-react';
+import { ProductGridRangoli, ProductGridRangoliBottomRight } from './SectionRangolis';
 
 export const ProductGrid: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -19,7 +20,10 @@ export const ProductGrid: React.FC = () => {
     : INITIAL_PRODUCTS.filter(p => p.category === selectedCategory);
 
   return (
-    <section id="products" className="py-14 md:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="products" className="relative py-14 md:py-20 bg-[#FAF7F2] border-b border-[#EAE2D8] overflow-hidden">
+      <ProductGridRangoli />
+      <ProductGridRangoliBottomRight />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4EDE4] border border-[#D9CBBF] text-xs font-semibold text-[#8C4320] mb-3">
@@ -70,6 +74,7 @@ export const ProductGrid: React.FC = () => {
         <span className="text-[11px] font-semibold text-[#8B2635] bg-[#FFFFFF] px-3 py-0.5 rounded-full border border-[#DDB6AD] shrink-0">
           WhatsApp Direct Order
         </span>
+      </div>
       </div>
     </section>
   );
