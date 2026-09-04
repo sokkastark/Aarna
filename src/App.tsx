@@ -3,6 +3,7 @@ import { CartProvider } from './context/CartContext';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProductGrid } from './components/ProductGrid';
+import { USASamplesBanner } from './components/USASamplesBanner';
 import { MysuruHeritageArtBanner } from './components/MysuruHeritageArtBanner';
 import { HowItWorks } from './components/HowItWorks';
 import { BrandStory } from './components/BrandStory';
@@ -12,6 +13,7 @@ import { CartDrawer } from './components/CartDrawer';
 import { OrderFormModal } from './components/OrderFormModal';
 import { FloatingCartButton } from './components/FloatingCartButton';
 import { PWAInstallBanner } from './components/PWAInstallBanner';
+import { ToastNotification } from './components/ToastNotification';
 
 export default function App() {
   return (
@@ -20,10 +22,14 @@ export default function App() {
         {/* Navigation Bar */}
         <Header />
 
+        {/* Floating Toast Feedback Notification */}
+        <ToastNotification />
+
         {/* Main Content Sections */}
         <main className="flex-1">
           <Hero />
           <ProductGrid />
+          <USASamplesBanner />
           <MysuruHeritageArtBanner />
           <HowItWorks />
           <BrandStory />

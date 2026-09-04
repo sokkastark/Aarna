@@ -1,6 +1,14 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, ReactNode } from 'react';
 import { CartItem, Product, ProductVariant } from '../types';
 
+export interface ToastNotificationInfo {
+  id: number;
+  productName: string;
+  variantWeight: string;
+  imageUrl?: string;
+  quantity: number;
+}
+
 interface CartContextType {
   items: CartItem[];
   addItem: (product: Product, variant: ProductVariant, quantity?: number) => void;
@@ -8,6 +16,11 @@ interface CartContextType {
   updateQuantity: (itemId: string, deltaOrValue: number, isAbsolute?: boolean) => void;
   clearCart: () => void;
   totalItemsCount: number;
+
+  // Added-to-Cart Feedback Animation & Toast
+  isCartBumping: boolean;
+  activeToast: ToastNotificationInfo | null;
+  dismissToast: () => void;
   
   // UI state for Cart Drawer
   isCartOpen: boolean;
@@ -45,6 +58,22 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  // Cart Bump Animation & Toast Notification State
+  const [isCartBumping, setIsCartBumping] = useState(false);
+  const [activeToast, setActiveToast] = useState<ToastNotificationInfo | null>(null);
+
+  const dismissToast = () => setActiveToast(null);
+
+  // Auto-dismiss toast after 3.5 seconds
+  useEffect(() => {
+    if (activeToast) {
+      const timer = setTimeout(() => {
+        setActiveToast(null);
+      }, 3500);
+      return () => clearTimeout(timer);
+    }
+  }, [activeToast]);
 
   // Sync with LocalStorage
   useEffect(() => {
@@ -84,8 +113,18 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
     });
 
-    // Automatically open cart notification or drawer if desired
-    setIsCartOpen(true);
+    // Trigger cart bump animation
+    setIsCartBumping(true);
+    setTimeout(() => setIsCartBumping(false), 700);
+
+    // Trigger visual toast banner feedback
+    setActiveToast({
+      id: Date.now(),
+      productName: product.name,
+      variantWeight: variant.weight,
+      imageUrl: product.imageUrl,
+      quantity
+    });
   };
 
   const removeItem = (itemId: string) => {
@@ -138,6 +177,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         updateQuantity,
         clearCart,
         totalItemsCount,
+        isCartBumping,
+        activeToast,
+        dismissToast,
         isCartOpen,
         openCart,
         closeCart,

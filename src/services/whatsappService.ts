@@ -62,3 +62,12 @@ export function getWhatsAppInquiryUrl(productName?: string): string {
   }
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
 }
+
+/**
+ * Generates USA sample reservation link
+ */
+export function getWhatsAppUSASampleUrl(): string {
+  const cleanNumber = BRAND_CONFIG.whatsappNumber.replace(/[^0-9]/g, '');
+  const message = `Hello Aarna Food Products! I am located in the USA 🇺🇸 and would love to reserve/be notified when tasting samples become available in the United States.`;
+  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
+}

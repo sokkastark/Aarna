@@ -6,7 +6,7 @@ import { BRAND_CONFIG } from '../config/brand';
 import { getWhatsAppInquiryUrl } from '../services/whatsappService';
 
 export const Header: React.FC = () => {
-  const { totalItemsCount, openCart } = useCart();
+  const { totalItemsCount, openCart, isCartBumping } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,10 +34,17 @@ export const Header: React.FC = () => {
           : 'bg-[#FAF7F2] border-b border-[#EFE8DF]'
       }`}
     >
-      {/* Top Banner for Small-Batch Announcement */}
-      <div className="bg-[#8B2635] text-[#FAF7F2] text-xs font-medium py-1.5 px-4 text-center flex items-center justify-center gap-2">
-        <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
-        <span>Authentic Mysuru spice blends crafted in small batches • WhatsApp Pre-Orders Open</span>
+      {/* Top Banner for Small-Batch & USA Announcement */}
+      <div className="bg-[#8B2635] text-[#FAF7F2] text-xs font-medium py-1.5 px-4 text-center flex flex-wrap items-center justify-center gap-2">
+        <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse shrink-0" />
+        <span>Authentic Mysuru spice blends crafted in small batches</span>
+        <span className="hidden sm:inline text-[#D4AF37]">•</span>
+        <a
+          href="#usa-samples"
+          className="inline-flex items-center gap-1 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/30 px-2 py-0.5 rounded-full text-[#F4E1A4] font-semibold text-[11px] border border-[#D4AF37]/40 transition-colors"
+        >
+          <span>🇺🇸 USA Samples Coming Soon</span>
+        </a>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
@@ -78,12 +85,18 @@ export const Header: React.FC = () => {
           <button
             id="header-cart-btn"
             onClick={openCart}
-            className="relative flex items-center justify-center p-2.5 rounded-full bg-[#8B2635] text-[#FAF7F2] hover:bg-[#721F2B] active:scale-95 transition-all shadow-xs cursor-pointer"
+            className={`relative flex items-center justify-center p-2.5 rounded-full bg-[#8B2635] text-[#FAF7F2] hover:bg-[#721F2B] active:scale-95 transition-all shadow-xs cursor-pointer ${
+              isCartBumping ? 'animate-cart-bump ring-4 ring-[#D4AF37]/50' : ''
+            }`}
             aria-label="View shopping cart"
           >
-            <ShoppingBag className="w-5 h-5" />
+            <ShoppingBag className={`w-5 h-5 transition-transform ${isCartBumping ? 'text-[#D4AF37]' : ''}`} />
             {totalItemsCount > 0 && (
-              <span className="absolute -top-1 -right-1 min-w-5 h-5 px-1 rounded-full bg-[#C29B38] text-[#2C2420] text-xs font-bold flex items-center justify-center shadow-xs animate-scale-in">
+              <span
+                className={`absolute -top-1 -right-1 min-w-5 h-5 px-1 rounded-full bg-[#C29B38] text-[#2C2420] text-xs font-bold flex items-center justify-center shadow-xs ${
+                  isCartBumping ? 'animate-badge-pop bg-[#FAF7F2] text-[#8B2635]' : ''
+                }`}
+              >
                 {totalItemsCount}
               </span>
             )}
