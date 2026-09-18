@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
           href="#usa-samples"
           className="inline-flex items-center gap-1 bg-[#D4AF37]/20 hover:bg-[#D4AF37]/30 px-2 py-0.5 rounded-full text-[#F4E1A4] font-semibold text-[11px] border border-[#D4AF37]/40 transition-colors"
         >
-          <span>🇺🇸 USA Samples Coming Soon</span>
+          <span>🇺🇸 USA Samples Available — Order Now!</span>
         </a>
       </div>
 

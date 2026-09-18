@@ -15,6 +15,14 @@ export const CartDrawer: React.FC = () => {
     openOrderForm
   } = useCart();
 
+  const estimatedTotal = React.useMemo(() => {
+    return items.reduce((sum, item) => {
+      if (!item.pricePlaceholder) return sum;
+      const num = parseInt(item.pricePlaceholder.replace(/[^0-9]/g, ''), 10);
+      return sum + (isNaN(num) ? 0 : num * item.quantity);
+    }, 0);
+  }, [items]);
+
   if (!isCartOpen) return null;
 
   return (
@@ -124,8 +132,8 @@ export const CartDrawer: React.FC = () => {
                           {item.variantWeight}
                         </span>
                         {item.pricePlaceholder && (
-                          <span className="text-[11px] text-[#6B5E55]">
-                            {item.pricePlaceholder} (est.)
+                          <span className="text-[11px] font-bold text-[#8B2635]">
+                            {item.pricePlaceholder}
                           </span>
                         )}
                       </div>
@@ -185,6 +193,15 @@ export const CartDrawer: React.FC = () => {
                 {totalItemsCount} {totalItemsCount === 1 ? 'pack' : 'packs'}
               </span>
             </div>
+
+            {estimatedTotal > 0 && (
+              <div className="flex items-center justify-between text-sm sm:text-base pt-2 border-t border-[#DDD3C7] font-serif-title">
+                <span className="font-bold text-[#2C2420]">Total Amount:</span>
+                <span className="font-bold text-[#8B2635] text-lg">
+                  ₹{estimatedTotal.toLocaleString('en-IN')}
+                </span>
+              </div>
+            )}
 
             <div className="text-[11px] text-[#6B5E55] leading-normal">
               Final total amount and dispatch timeline will be confirmed by {BRAND_CONFIG.name} directly on WhatsApp.

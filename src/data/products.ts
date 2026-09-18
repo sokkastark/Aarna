@@ -29,7 +29,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     variants: [
       { id: "100g", weight: "100g", pricePlaceholder: "₹110" },
       { id: "250g", weight: "250g", pricePlaceholder: "₹250", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹480" }
+      { id: "500g", weight: "500g", pricePlaceholder: "₹480" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹920" }
     ],
     highlights: [
       "Ready-to-eat instant tamarind gojju paste",
@@ -70,8 +71,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     },
     variants: [
       { id: "100g", weight: "100g", pricePlaceholder: "₹85" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹200", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹380" }
+      { id: "250g", weight: "250g", pricePlaceholder: "₹210", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹410" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹810" }
     ],
     highlights: [
       "14 heritage spices including Kapok Buds (Marathi Moggu)",
@@ -112,8 +114,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     },
     variants: [
       { id: "100g", weight: "100g", pricePlaceholder: "₹85" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹200", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹380" }
+      { id: "250g", weight: "250g", pricePlaceholder: "₹210", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹410" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹810" }
     ],
     highlights: [
       "Heritage Karnataka Brahmin household recipe",
@@ -152,9 +155,10 @@ export const INITIAL_PRODUCTS: Product[] = [
       pillText: "text-[#FAF7F2]"
     },
     variants: [
-      { id: "100g", weight: "100g", pricePlaceholder: "₹70" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹160", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹300" }
+      { id: "100g", weight: "100g", pricePlaceholder: "₹75" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹195", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹390" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹780" }
     ],
     highlights: [
       "Coarsely ground for satisfying crunch",
@@ -195,8 +199,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     },
     variants: [
       { id: "100g", weight: "100g", pricePlaceholder: "₹80" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹190", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹360" }
+      { id: "250g", weight: "250g", pricePlaceholder: "₹200", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹400" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹800" }
     ],
     highlights: [
       "Slow-roasted whole coriander & fenugreek aroma",
@@ -235,9 +240,10 @@ export const INITIAL_PRODUCTS: Product[] = [
       pillText: "text-[#FAF7F2]"
     },
     variants: [
-      { id: "100g", weight: "100g", pricePlaceholder: "₹75" },
-      { id: "250g", weight: "250g", pricePlaceholder: "₹170", isDefault: true },
-      { id: "500g", weight: "500g", pricePlaceholder: "₹320" }
+      { id: "100g", weight: "100g", pricePlaceholder: "₹80" },
+      { id: "250g", weight: "250g", pricePlaceholder: "₹200", isDefault: true },
+      { id: "500g", weight: "500g", pricePlaceholder: "₹395" },
+      { id: "1kg", weight: "1kg", pricePlaceholder: "₹790" }
     ],
     highlights: [
       "Loaded with freshly roasted Malabar black pepper & cumin",

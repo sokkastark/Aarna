@@ -93,7 +93,7 @@ export const ProductDetailModal: React.FC = () => {
               {selectedVariant.pricePlaceholder && (
                 <div className="inline-flex items-baseline gap-1.5 text-[#8B2635] font-serif-title text-xl font-bold">
                   <span>{selectedVariant.pricePlaceholder}</span>
-                  <span className="text-xs font-normal text-[#8C7A70]">({selectedVariant.weight} • estimated placeholder)</span>
+                  <span className="text-xs font-normal text-[#8C7A70]">({selectedVariant.weight})</span>
                 </div>
               )}
             </div>
@@ -158,7 +158,7 @@ export const ProductDetailModal: React.FC = () => {
               <label className="block text-xs font-bold uppercase tracking-wider text-[#2C2420] mb-2">
                 Select Package Size:
               </label>
-              <div className="grid grid-cols-3 gap-2">
+              <div className={`grid gap-2 ${selectedProduct.variants.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
                 {selectedProduct.variants.map((v) => {
                   const isCurrent = selectedVariant.id === v.id;
                   return (

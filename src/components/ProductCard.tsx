@@ -77,7 +77,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             )}
           </div>
 
-          <div className="grid grid-cols-3 gap-1.5 mb-4">
+          <div className={`grid gap-1.5 mb-4 ${product.variants.length === 4 ? 'grid-cols-4' : 'grid-cols-3'}`}>
             {product.variants.map((variant) => {
               const isSelected = selectedVariant.id === variant.id;
               return (

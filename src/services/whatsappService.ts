@@ -10,15 +10,25 @@ export function generateWhatsAppOrderMessage(
 ): string {
   const itemsList = items
     .map((item, index) => {
-      return `${index + 1}. ${item.productName} (${item.variantWeight}) × ${item.quantity}`;
+      const priceText = item.pricePlaceholder ? ` [${item.pricePlaceholder}]` : '';
+      return `${index + 1}. ${item.productName} (${item.variantWeight}${priceText}) × ${item.quantity}`;
     })
     .join('\n');
+
+  const estimatedTotal = items.reduce((sum, item) => {
+    if (!item.pricePlaceholder) return sum;
+    const num = parseInt(item.pricePlaceholder.replace(/[^0-9]/g, ''), 10);
+    return sum + (isNaN(num) ? 0 : num * item.quantity);
+  }, 0);
 
   const orderTypeLabel = customer.orderType === 'pickup' 
     ? 'Self Pickup (Mysuru)' 
     : 'Home Delivery';
 
   let message = `Hello Aarna Food Products,\n\nI would like to place a pre-order:\n\n${itemsList}\n\n`;
+  if (estimatedTotal > 0) {
+    message += `💰 Total Amount: ₹${estimatedTotal.toLocaleString('en-IN')}\n\n`;
+  }
   message += `👤 Customer Name: ${customer.customerName.trim()}\n`;
   message += `📞 Phone: ${customer.phone.trim()}\n`;
   message += `📦 Order Type: ${orderTypeLabel}\n`;
@@ -64,10 +74,10 @@ export function getWhatsAppInquiryUrl(productName?: string): string {
 }
 
 /**
- * Generates USA sample reservation link
+ * Generates USA sample order link
  */
 export function getWhatsAppUSASampleUrl(): string {
   const cleanNumber = BRAND_CONFIG.whatsappNumber.replace(/[^0-9]/g, '');
-  const message = `Hello Aarna Food Products! I am located in the USA 🇺🇸 and would love to reserve/be notified when tasting samples become available in the United States.`;
+  const message = `Hello Aarna Food Products! I am located in the USA 🇺🇸 and would like to order an authentic Mysuru spice sample pack. Please share order details!`;
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
 }
